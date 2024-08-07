@@ -3,6 +3,9 @@ pipeline {
     environment {
         MY_VAR = 'some_value'
     }
+    options {
+        timeout(time: 1, unit: 'HOURS')
+    }
     stages {
         stage ('Build Backend') {
             steps {
