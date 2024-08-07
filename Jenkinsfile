@@ -24,28 +24,5 @@ pipeline {
                 bat 'mvn test'
             }
         }
-    }
-
-    stage('Matrix') {
-            matrix {
-                axes {
-                    axis {
-                        name 'OS'
-                        values 'linux', 'windows'
-                    }
-                    axis {
-                        name 'VERSION'
-                        values '1.0', '2.0'
-                    }
-                }
-                stages {
-                    stage('Matrix Stage') {
-                        steps {
-                            echo "Building on ${OS} with version ${VERSION}"
-                        }
-                    }
-                }
-            }
-        }
-    
+    } 
 }
