@@ -75,6 +75,16 @@ pipeline {
                 echo 'This stage runs conditionally based on parameter'
             }
         }
+
+        stage('User Input') {
+            input {
+                message 'Do you want to proceed?'
+                ok 'Yes'
+            }
+            steps {
+                echo 'User chose to proceed'
+            }
+        }
     }
 
     post {
@@ -84,10 +94,5 @@ pipeline {
         failure {
             echo 'Pipeline failed!'
         }
-    }
-
-    input {
-        message 'Do you want to proceed?'
-        ok 'Yes'
     }
 }
