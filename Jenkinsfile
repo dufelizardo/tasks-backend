@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        MY_VAR = 'some_value'
+    }
     stages {
         stage ('Build Backend') {
             steps {
