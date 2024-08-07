@@ -25,4 +25,3 @@ public class DateUtilsTest {
         Assert.assertTrue(DateUtils.isEqualOrFutureDate(date));
     }
 }
-
