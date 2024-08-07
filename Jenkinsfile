@@ -25,18 +25,4 @@ pipeline {
             }
         }
     }
-    stage('Parallel Stages') {
-            parallel {
-                stage('Parallel Stage 1') {
-                    steps {
-                        echo 'Parallel Stage 1'
-                    }
-                }
-                stage('Parallel Stage 2') {
-                    steps {
-                        echo 'Parallel Stage 2'
-                    }
-                }
-            }
-    }
 }
