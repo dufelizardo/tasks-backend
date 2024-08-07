@@ -90,8 +90,4 @@ pipeline {
         message 'Do you want to proceed?'
         ok 'Yes'
     }
-
-    credentials {
-        usernamePassword(credentialsId: 'my-credentials-id', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
-    }
 }
